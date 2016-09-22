@@ -15,7 +15,7 @@ source:
   sha256: 60089b4e05a997edda49f40d4b6db883e0ce5bbe9fdedb5106739dbfe58a8055                # [win]
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:        # [unix]
