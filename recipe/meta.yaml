@@ -44,6 +44,7 @@ test:
   files:
     - SSLTest.cmake
   commands:
+    - cmake
     - cmake --version
     - cmake -V -P SSLTest.cmake
 
