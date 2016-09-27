@@ -42,7 +42,7 @@ requirements:        # [unix]
 
 test:
   requires:
-    - python
+    - python 2.7.*
     - setuptools
 
   files:
