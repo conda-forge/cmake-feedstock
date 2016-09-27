@@ -41,6 +41,10 @@ requirements:        # [unix]
     - zlib 1.2.*     # [unix]
 
 test:
+  requires:
+    - python
+    - setuptools
+
   files:
     - SSLTest.cmake
   commands:
