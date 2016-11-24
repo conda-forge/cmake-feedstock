@@ -15,7 +15,7 @@ source:
   sha256: 613eec5a8b2e2c49826e0e8e18f516b6f2b481309ae55925d226ce8ab78b0fba                # [win]
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:        # [unix]
@@ -44,6 +44,7 @@ test:
   files:
     - SSLTest.cmake
   commands:
+    - cmake
     - cmake --version
     - cmake -V -P SSLTest.cmake
 
