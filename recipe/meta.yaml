@@ -54,6 +54,10 @@ requirements:
     - vs2013_runtime  # [win]
 
 test:
+  requires:
+    - python 2.7.*
+    - setuptools
+
   files:
     - SSLTest.cmake
   commands:
