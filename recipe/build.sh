@@ -10,5 +10,6 @@
              -- \
              -DCMAKE_BUILD_TYPE:STRING=Release \
              -DCMAKE_FIND_ROOT_PATH="${PREFIX}" \
-             -DCMAKE_INSTALL_RPATH="${PREFIX}/lib"
+             -DCMAKE_INSTALL_RPATH="${PREFIX}/lib" \
+             -DBUILD_CursesDialog=OFF
 make install -j${CPU_COUNT}
