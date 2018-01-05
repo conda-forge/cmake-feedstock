@@ -24,7 +24,7 @@ source:
     - cmake-3.10-boost-1.66-support.patch  # [not win]
 
 build:
-  number: 2
+  number: 3
   detect_binary_files_with_prefix: true
 
 requirements:
