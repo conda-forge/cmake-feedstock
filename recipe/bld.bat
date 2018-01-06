@@ -14,12 +14,6 @@ dir /p %LIBRARY_PREFIX%\lib
 cmake -LAH -G"NMake Makefiles"                               ^
     -DCMAKE_BUILD_TYPE=%CMAKE_CONFIG%                        ^
     -DCMAKE_FIND_ROOT_PATH="%LIBRARY_PREFIX%"                ^
-    -DCMAKE_USE_SYSTEM_ZLIB=ON                               ^
-    -DCMAKE_USE_SYSTEM_EXPAT=ON                              ^
-    -DCMAKE_USE_SYSTEM_CURL=ON                               ^
-    -DCMAKE_USE_SYSTEM_BZIP2=ON                              ^
-    -DCMAKE_USE_SYSTEM_LIBLZMA=ON                            ^
-    -DLIBLZMA_LIBRARY="%LIBRARY_PREFIX%\lib\liblzma.lib"     ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ..
 if errorlevel 1 exit 1
 

@@ -16,31 +16,32 @@ source:
     - cmake-3.10-boost-1.66-support.patch
 
 build:
-  number: 3
+  number: 4
   detect_binary_files_with_prefix: true
   msvc_compiler: 14.0
 
 requirements:
   build:
     - toolchain
-    - bzip2 1.0.*
-    - curl >=7.44.0,<8
-    - expat
+    - bzip2 1.0.*  # [unix]
+    - curl >=7.44.0,<8  # [unix]
+    - expat  # [unix]
     - ncurses 5.9*  # [unix]
-    - xz 5.2.*
-    - zlib 1.2.11
+    - xz 5.2.*  # [unix]
+    - zlib 1.2.11  # [unix]
     - libuv  # [unix]
     - rhash  # [unix]
 
   run:
-    - bzip2 1.0.*
-    - curl >=7.44.0,<8
-    - expat
+    - bzip2 1.0.*  # [unix]
+    - curl >=7.44.0,<8  # [unix]
+    - expat  # [unix]
     - ncurses 5.9*  # [unix]
-    - xz 5.2.*
-    - zlib 1.2.11
+    - xz 5.2.*  # [unix]
+    - zlib 1.2.11  # [unix]
     - libuv  # [unix]
     - rhash  # [unix]
+    - vs2015_runtime  # [win]
 
 test:
   files:
