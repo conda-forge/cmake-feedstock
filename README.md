@@ -14,9 +14,9 @@ Summary: CMake is an extensible, open-source system that manages the build proce
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/cmake-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/cmake-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/cmake-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/cmake-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/cmake-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/cmake-feedstock/branch/master)
+![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
 
 Current release info
 ====================
