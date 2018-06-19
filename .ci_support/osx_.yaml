@@ -1,13 +1,19 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 bzip2:
 - '1'
 c_compiler:
-- vs2015
+- toolchain_c
 curl:
 - '7.59'
 cxx_compiler:
-- vs2015
+- toolchain_cxx
 expat:
 - '2.2'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
 ncurses:
 - '5.9'
 pin_run_as_build:
@@ -19,19 +25,11 @@ pin_run_as_build:
     max_pin: x.x
   ncurses:
     max_pin: x.x
-  vc:
-    max_pin: x
   xz:
     max_pin: x.x
   zlib:
     max_pin: x.x
-vc:
-- '14'
 xz:
 - '5.2'
-zip_keys:
-- - vc
-  - c_compiler
-  - cxx_compiler
 zlib:
 - '1.2'
