@@ -9,7 +9,7 @@ cxx_compiler:
 expat:
 - '2.2'
 ncurses:
-- '5.9'
+- '6.1'
 pin_run_as_build:
   bzip2:
     max_pin: x
