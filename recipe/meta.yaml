@@ -49,6 +49,7 @@ test:
     - cmake -V -P SSLTest.cmake
     - ctest --version
     - cpack --version
+    - ccmake --version  # [unix]
 
 about:
   home: http://www.cmake.org/
