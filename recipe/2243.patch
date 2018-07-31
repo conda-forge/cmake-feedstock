@@ -1,0 +1,26 @@
+From 3b5611a5d09e968e8cd78f0b4788d968652edf76 Mon Sep 17 00:00:00 2001
+From: Julien Schueller <schueller@phimeca.com>
+Date: Tue, 31 Jul 2018 06:07:09 -0400
+Subject: [PATCH] UseSWIG: Do not reset SWIG_MODULE_${name}_EXTRA_FLAGS
+
+Since commit v3.12.0-rc1~481^2 (UseSWIG: modernize module, 2018-01-29)
+we clear this variable but that regressed support for user-set flags.
+---
+ Modules/UseSWIG.cmake | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/Modules/UseSWIG.cmake b/Modules/UseSWIG.cmake
+index b74ba9f50e..09c43a2d23 100644
+--- a/Modules/UseSWIG.cmake
++++ b/Modules/UseSWIG.cmake
+@@ -241,7 +241,6 @@ macro(SWIG_MODULE_INITIALIZE name language)
+   string(TOUPPER "${language}" SWIG_MODULE_${name}_LANGUAGE)
+   string(TOLOWER "${language}" SWIG_MODULE_${name}_SWIG_LANGUAGE_FLAG)
+ 
+-  set(SWIG_MODULE_${name}_EXTRA_FLAGS)
+   if (NOT DEFINED SWIG_MODULE_${name}_NOPROXY)
+     set (SWIG_MODULE_${name}_NOPROXY FALSE)
+   endif()
+-- 
+2.17.1
+
