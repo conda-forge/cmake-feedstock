@@ -10,7 +10,7 @@ source:
   sha256: 480dd32bca6ebe4492bcff41b17764bfb1288c3f5fd1831d580d581b9af3c002
 
 build:
-  number: 0
+  number: 1000
   skip: True  # [win and vc<14]
   ignore_run_exports:
     - vc
@@ -19,11 +19,11 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - make
+    - make            # [unix]
 
   host:
     - bzip2           # [unix]
-    - curl            # [unix]
+    - curl 7.61.1           # [unix]
     - expat           # [unix]
     - ncurses         # [unix]
     - xz              # [unix]
