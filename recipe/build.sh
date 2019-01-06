@@ -23,6 +23,7 @@ export DEBUG_CXXFLAGS=$(echo "$DEBUG_CXXFLAGS" |sed -e "s|-I$PREFIX/include||")
              -DCMAKE_FIND_ROOT_PATH="${PREFIX}" \
              -DCMAKE_INSTALL_RPATH="${PREFIX}/lib" \
              -DCURSES_INCLUDE_PATH="${PREFIX}/include" \
+             -DCMAKE_AR=${AR} \
              -DBUILD_CursesDialog=ON \
              -DCMake_HAVE_CXX_MAKE_UNIQUE:INTERNAL=FALSE \
              -DCMAKE_PREFIX_PATH="${PREFIX}" \
