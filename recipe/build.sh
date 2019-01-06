@@ -10,6 +10,9 @@ export DEBUG_CFLAGS=$(echo "$DEBUG_CFLAGS" |sed -e "s|-I$PREFIX/include||")
 export CXXFLAGS=$(echo "$CXXFLAGS" |sed -e "s|-I$PREFIX/include||")
 export DEBUG_CXXFLAGS=$(echo "$DEBUG_CXXFLAGS" |sed -e "s|-I$PREFIX/include||")
 
+
+FULL_AR=`which ${AR}`
+
 ./bootstrap \
              --verbose \
              --prefix="${PREFIX}" \
@@ -23,7 +26,7 @@ export DEBUG_CXXFLAGS=$(echo "$DEBUG_CXXFLAGS" |sed -e "s|-I$PREFIX/include||")
              -DCMAKE_FIND_ROOT_PATH="${PREFIX}" \
              -DCMAKE_INSTALL_RPATH="${PREFIX}/lib" \
              -DCURSES_INCLUDE_PATH="${PREFIX}/include" \
-             -DCMAKE_AR=${AR} \
+             -DCMAKE_AR=${FULL_AR} \
              -DBUILD_CursesDialog=ON \
              -DCMake_HAVE_CXX_MAKE_UNIQUE:INTERNAL=FALSE \
              -DCMAKE_PREFIX_PATH="${PREFIX}" \
