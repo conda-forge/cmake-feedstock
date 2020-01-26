@@ -1,4 +1,4 @@
-{% set version = "3.16.2" %}
+{% set version = "3.16.3" %}
 
 package:
   name: cmake
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://gitlab.kitware.com/cmake/cmake/-/archive/v{{ version }}/cmake-v{{ version }}.tar.bz2
-  sha256: f50bc274908a4929a06820bfcf12328d201f964bb52f43d4852465d4c7353234
+  sha256: bc3939f2b45828da7f810c1abbe42d138c83095088763e7680ccfd65f35b99f2
   patches:
     - patches/3.16.2/0001-find_-Add-debug-logging-infrastructure.patch
     - patches/3.16.2/0002-find_-Use-debug-logging-infrastructure.patch
@@ -21,7 +21,7 @@ source:
   #   - patches/git/0001-Add-more-debug-logging-to-cmFindCommon.patch
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win and vc<14]
   ignore_run_exports:
     - vc
