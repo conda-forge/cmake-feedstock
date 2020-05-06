@@ -17,7 +17,7 @@ docker_image:
 expat:
 - '2.2'
 libcurl:
-- '7.64'
+- '7'
 ncurses:
 - '6.1'
 pin_run_as_build:
