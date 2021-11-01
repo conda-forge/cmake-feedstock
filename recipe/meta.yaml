@@ -80,6 +80,8 @@ about:
     - Utilities/cmlibarchive/COPYING
     - Utilities/cmjsoncpp/LICENSE
   summary: CMake is an extensible, open-source system that manages the build process
+  doc_url: https://cmake.org/documentation/
+  dev_url: https://gitlab.kitware.com/cmake/
 
 extra:
   recipe-maintainers:
