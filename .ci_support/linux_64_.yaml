@@ -7,7 +7,7 @@ c_compiler_version:
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -15,20 +15,18 @@ cxx_compiler:
 cxx_compiler_version:
 - '9'
 docker_image:
-- quay.io/condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 expat:
 - '2'
 libcurl:
 - '7'
 ncurses:
-- '6.2'
+- '6'
 pin_run_as_build:
   bzip2:
     max_pin: x
   libcurl:
     max_pin: x
-  ncurses:
-    max_pin: x.x
   xz:
     max_pin: x.x
   zlib:
@@ -40,8 +38,6 @@ xz:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-- - cdt_name
-  - docker_image
 zlib:
 - '1.2'
 zstd:

@@ -25,14 +25,12 @@ expat:
 libcurl:
 - '7'
 ncurses:
-- '6.2'
+- '6'
 pin_run_as_build:
   bzip2:
     max_pin: x
   libcurl:
     max_pin: x
-  ncurses:
-    max_pin: x.x
   xz:
     max_pin: x.x
   zlib:
