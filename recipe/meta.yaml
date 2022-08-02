@@ -13,7 +13,8 @@ source:
   # folder: cmake
   # git_url: 'C:/opt/Shared.local/src/cmake'
   # git_url: 'https://gitlab.kitware.com/cmake/cmake'
-  # patches:
+  patches:
+    - patches/find_coin3d.patch
   #   - patches/git/0001-Add-more-debug-logging-to-cmFindCommon.patch
 
 build:
