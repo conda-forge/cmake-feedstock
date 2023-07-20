@@ -17,7 +17,7 @@ source:
   #   - patches/git/0001-Add-more-debug-logging-to-cmFindCommon.patch
 
 build:
-  number: 0
+  number: 1
   ignore_run_exports:
     - vc
 
@@ -41,18 +41,6 @@ requirements:
     - libuv           # [unix]
     - rhash           # [unix]
     - zstd            # [unix]
-
-  run:
-    - bzip2           # [unix]
-    - libcurl         # [unix]
-    - expat           # [unix]
-    - ncurses         # [unix]
-    - xz              # [unix]
-    - zlib            # [unix]
-    - libuv           # [unix]
-    - rhash           # [unix]
-    - zstd            # [unix]
-    - vs2015_runtime  # [win]
 
 test:
   files:
