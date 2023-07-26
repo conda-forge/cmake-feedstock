@@ -41,7 +41,6 @@ requirements:
     - libuv           # [unix]
     - rhash           # [unix]
     - zstd            # [unix]
-    - jsoncpp         # [unix]
 
   run:
     - bzip2           # [unix]
