@@ -29,7 +29,9 @@ else
        --no-system-jsoncpp \
        --parallel=${CPU_COUNT} \
        -- \
-       ${CMAKE_ARGS}
+       ${CMAKE_ARGS} \
+       -DCMAKE_USE_SYSTEM_CPPDAP=OFF \
+       -DCMAKE_USE_SYSTEM_JSONCPP=OFF
 fi
 
 # CMake automatically selects the highest C++ standard available
