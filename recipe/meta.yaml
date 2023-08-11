@@ -52,7 +52,6 @@ requirements:
     - zstd            # [unix]
 
   run:
-    - { { pin_compatible('jsoncpp') } }
     - bzip2           # [unix]
     - libcurl         # [unix]
     - expat           # [unix]
