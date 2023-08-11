@@ -36,7 +36,7 @@ requirements:
     - jsoncpp >=1.6.0 # [win and unix]
 
   host:
-    - jsoncpp >=1.6.0
+    - jsoncpp >=1.6.0 # [win and unix]
     - bzip2           # [unix]
     - libcurl         # [unix]
     - expat           # [unix]
