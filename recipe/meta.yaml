@@ -33,7 +33,8 @@ requirements:
     - m2-patch        # [win]
     - m2-ncurses      # [win]
     - jsoncpp >=1.6.0 # [win or unix]
-    # cmake is needed to build, but it cannot depend on itself, curl and 7zip are used to get a prebuilt version.
+    # cmake is needed to build, but it cannot depend on itself.
+    # curl, 7zip, and tar are used to get a prebuilt version.
     - curl            # [win or unix]
     - 7zip            # [win]
     - tar             # [unix]
