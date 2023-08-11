@@ -40,7 +40,7 @@ requirements:
     - bzip2           # [unix]
     - libcurl         # [unix]
     - expat           # [unix]
-    - ncurses 5.9*    # [unix]
+    - ncurses         # [unix]
     - m2-ncurses      # [win]
     - xz              # [unix]
     - zlib            # [unix]

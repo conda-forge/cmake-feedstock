@@ -30,7 +30,7 @@ else
        --no-system-libarchive \
        --no-system-jsoncpp \
        --no-system-cppdap \
-       --parallel="${CPU_COUNT}" \
+       --parallel=${CPU_COUNT} \
        -- \
        ${CMAKE_ARGS}
 fi
