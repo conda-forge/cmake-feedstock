@@ -2,5 +2,3 @@ c_compiler:    # [linux]
   - gcc        # [linux]
 cxx_compiler:  # [linux]
   - gxx        # [linux]
-numpy:
-  - 1.22
