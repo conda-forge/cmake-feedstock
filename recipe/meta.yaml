@@ -31,26 +31,16 @@ requirements:
     - ninja           # [win]
     - patch           # [not win]
     - m2-patch        # [win]
-    # - ncurses 5.9*      # [unix]
     - m2-ncurses      # [win]
     - cmake >=3.26.0  # [win and unix]
     - jsoncpp >=1.6.0 # [win and unix]
-    # - curl >=7.44.0,<8    # [win]
-    # - 7zip >=19.0         # [win]
-    # - git
-    # - bzip2 1.0.*       # [unix]
-    # - expat             # [unix]
-    # - xz 5.2.*          # [unix]
-    # - zlib 1.2.11       # [unix]
-    # - libuv             # [unix]
-    # - rhash             # [unix]
 
   host:
     - jsoncpp >=1.6.0
     - bzip2           # [unix]
     - libcurl         # [unix]
     - expat           # [unix]
-    - ncurses         # [unix]
+    - ncurses 5.9*    # [unix]
     - m2-ncurses      # [win]
     - xz              # [unix]
     - zlib            # [unix]
