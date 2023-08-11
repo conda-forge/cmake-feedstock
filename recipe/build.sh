@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
+
+# cmake is needed to build cmake
+
+#export CMAKE_URL=https://cmake.org/files/v3.27/cmake-3.27.2-linux-x86_64.tar.gz
+#curl %CMAKE_URL% -o cmake-linux.tgz
+#tar xz cmake-linux.tgz > nil
+#export PATH=$(pwd)/cmake-$PKG_VERSION-$ARCH-$CPU_ARCH/bin:$PATH
+#cmake --version
+
+rem Build new cmake
 set -ex
 
 CMAKE_ARGS="$CMAKE_ARGS -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_FIND_ROOT_PATH=${PREFIX} -DCMAKE_INSTALL_RPATH=${PREFIX}/lib"
