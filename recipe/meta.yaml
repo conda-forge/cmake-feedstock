@@ -28,13 +28,15 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make            # [unix]
+    - ninja           # [win]
     - patch           # [not win]
     - m2-patch        # [win]
     - cmake           # [build_platform != target_platform]
     - jsoncpp >=1.6.0
+    - curl >=7.44.0,<8    # [win]
+    - 7zip >=19.0         # [win]
     # - git
     # - bzip2 1.0.*       # [unix]
-    # - curl >=7.44.0,<8  # [unix]
     # - expat             # [unix]
     # - ncurses 5.9*      # [unix]
     # - xz 5.2.*          # [unix]
