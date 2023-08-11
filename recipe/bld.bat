@@ -1,7 +1,9 @@
 
 if "%ARCH%"=="32" (set CPU_ARCH=x86) else (set CPU_ARCH=x64)
 
-set CMAKE_URL=https://cmake.org/files/v%PKG_VERSION:~0,4%/cmake-%PKG_VERSION%-win%ARCH%-%CPU_ARCH%.zip
+rem The cmake fetched in the following is not the target but is used to build the target.
+set CMAKE_URL=https://cmake.org/files/v3.27/cmake-3.27.2-windows-x86_64.zip
+rem set CMAKE_URL=https://cmake.org/files/v%PKG_VERSION:~0,4%/cmake-%PKG_VERSION%-win%ARCH%-%CPU_ARCH%.zip
 curl "%CMAKE_URL%" -o cmake-win.zip
 7z x cmake-win.zip > nil
 set PATH=%CD%\cmake-%PKG_VERSION%-win%ARCH%-%CPU_ARCH%\bin;%PATH%
