@@ -35,11 +35,11 @@ requirements:
     - patch           # [not win]
     - m2-patch        # [win]
     - m2-ncurses      # [win]
-    - cmake >=3.26.0  # [win and unix]
-    - jsoncpp >=1.6.0 # [win and unix]
+    - cmake >=3.26.0  # [win or unix]
+    - jsoncpp >=1.6.0 # [win or unix]
 
   host:
-    - jsoncpp >=1.6.0 # [win and unix]
+    - jsoncpp >=1.6.0 # [win or unix]
     - bzip2           # [unix]
     - libcurl         # [unix]
     - expat           # [unix]
