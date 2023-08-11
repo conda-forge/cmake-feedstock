@@ -23,9 +23,6 @@ build:
   ignore_run_exports:
     - vc
 
-
-
-
 requirements:
   build:
     - {{ compiler('c') }}
