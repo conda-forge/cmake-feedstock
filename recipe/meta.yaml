@@ -31,6 +31,7 @@ requirements:
     - zlib 1.2.11  # [unix]
     - libuv  # [unix]
     - rhash  # [unix]
+    - jsoncpp
 
   run:
     - bzip2 1.0.*  # [unix]
