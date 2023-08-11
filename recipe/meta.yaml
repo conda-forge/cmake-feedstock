@@ -38,7 +38,7 @@ requirements:
     - zlib 1.2.11       # [unix]
     - libuv             # [unix]
     - rhash             # [unix]
-    - jsoncpp
+    - jsoncpp >=1.6.0
 
   host:
     - bzip2           # [unix]
@@ -50,6 +50,7 @@ requirements:
     - libuv           # [unix]
     - rhash           # [unix]
     - zstd            # [unix]
+    - jsoncpp >=1.6.0
 
   run:
     - bzip2           # [unix]
