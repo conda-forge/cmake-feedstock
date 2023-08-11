@@ -8,7 +8,7 @@
 #export PATH=$(pwd)/cmake-$PKG_VERSION-$ARCH-$CPU_ARCH/bin:$PATH
 #cmake --version
 
-rem Build new cmake
+# Build new cmake
 set -ex
 
 CMAKE_ARGS="$CMAKE_ARGS -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_FIND_ROOT_PATH=${PREFIX} -DCMAKE_INSTALL_RPATH=${PREFIX}/lib"
