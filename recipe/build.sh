@@ -18,6 +18,7 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
        -DBUILD_QtDialog=OFF \
        -DCMAKE_USE_SYSTEM_LIBRARY_LIBARCHIVE=OFF \
        -DCMAKE_USE_SYSTEM_LIBRARY_JSONCPP=OFF \
+       -DCMAKE_USE_SYSTEM_CPPDAP=OFF \
        . || (cat TryRunResults.cmake; false)
 else
   ./bootstrap \
