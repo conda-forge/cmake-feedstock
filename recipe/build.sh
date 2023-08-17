@@ -2,7 +2,7 @@
 
 # cmake is needed to build cmake
 
-#export CMAKE_URL=https://cmake.org/files/v3.27/cmake-3.27.2-linux-x86_64.tar.gz
+#export CMAKE_URL=https://cmake.org/files/v3.27/cmake-3.27.3-linux-x86_64.tar.gz
 #curl %CMAKE_URL% -o cmake-linux.tgz
 #tar xz cmake-linux.tgz > nil
 #export PATH=$(pwd)/cmake-$PKG_VERSION-$ARCH-$CPU_ARCH/bin:$PATH

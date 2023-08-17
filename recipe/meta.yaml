@@ -1,5 +1,5 @@
 {% set name = "cmake" %}
-{% set version = "3.27.2" %}
+{% set version = "3.27.3" %}
 
 package:
   name: cmake
@@ -30,8 +30,13 @@ outputs:
 
     requirements:
       build:
-        - cmake = 3.26.4   # [win]
-        - cmake-no-system  # [not win]
+        # cmake is needed to build, but it cannot depend on itself.
+        # curl, 7zip, and tar are used to get a prebuilt version.
+        - curl               # [win or unix]
+        # - cmake = 3.26.4   # [win]
+        - 7zip               # [win]
+        # - cmake-no-system  # [not win]
+        - tar             # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - ninja            # [win]
