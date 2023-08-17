@@ -1,9 +1,9 @@
-c_compiler:
-  - gcc        # [unix]
-  - gcc        # [win]
-cxx_compiler:
-  - gxx        # [unix]
-  - gxx        # [win]
+#c_compiler:
+#  - gcc        # [unix]
+#  - gcc        # [win]
+#cxx_compiler:
+#  - gxx        # [unix]
+#  - gxx        # [win]
 build_script:
   - build.sh   # [unix]
   - bld.bat    # [win]
