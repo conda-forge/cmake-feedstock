@@ -27,15 +27,15 @@ outputs:
         # - cmake = 3.26.4   # [win]
         - 7zip               # [win]
         # - cmake-no-system  # [not win]
-        - tar             # [unix]
+        - tar                # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
-        - ninja            # [win]
-        - make             # [unix]
-        - patch            # [not win]
-        - m2-patch         # [win]
-        - m2-ncurses       # [win]
-        - jsoncpp >=1.6.0  # [win or unix]
+        - ninja              # [win]
+        - make               # [unix]
+        - patch              # [not win]
+        - m2-patch           # [win]
+        - m2-ncurses         # [win]
+        - jsoncpp >=1.6.0    # [win or unix]
 
       host:
         - jsoncpp >=1.6.0  # [win or unix]
