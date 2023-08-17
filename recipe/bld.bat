@@ -1,10 +1,11 @@
 
 :: The cmake fetched here is not the target it is used to build the target.
 :: It should probably be checked.
-if "%ARCH%"=="32" (set CPU_ARCH=x86) else (set CPU_ARCH=x64)
+if "%ARCH%"=="32" (set CPU_ARCH=x86_32) else (set CPU_ARCH=x86_64)
 
-set CMAKE_URL=https://cmake.org/files/v3.27/cmake-3.27.2-windows-x86_64.zip
-:: set CMAKE_URL=https://cmake.org/files/v%PKG_VERSION:~0,4%/cmake-%PKG_VERSION%-win%ARCH%-%CPU_ARCH%.zip
+set CMAKE_URL=https://cmake.org/files/v3.27/cmake-3.27.3-windows-x86_64.zip
+:: sha256 9c11b58e50b00200c3b1ae5e05d35a87e4d8068e4c7b98ee4eab8740a79380ec
+set CMAKE_URL2=https://cmake.org/files/v%PKG_VERSION:~0,4%/cmake-%PKG_VERSION%-windows-%CPU_ARCH%.zip
 
 curl "%CMAKE_URL%" -o cmake-win.zip
 IF %ERRORLEVEL% NEQ 0 (
@@ -20,6 +21,7 @@ IF %ERRORLEVEL% NEQ 0 (
    ECHO error running cmake %ERRORLEVEL%
 )
 ECHO "CMAKE URL: %CMAKE_URL%"
+ECHO "CMAKE URL2: %CMAKE_URL2%"
 
 :: build new cmake executable
 
