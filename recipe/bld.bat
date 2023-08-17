@@ -18,9 +18,15 @@ cmake -LAH -G"Ninja"                                         ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"                ^
     -DCURL_WINDOWS_SSPI:BOOL=ON                              ^
     -DBUILD_CursesDialog:BOOL=ON                             ^
-    -S . -B build
-IF %ERRORLEVEL% NEQ 0 exit 1
+    -S . -B .\build
+IF %ERRORLEVEL% NEQ 0 (
+   ECHO error configuring cmake %ERRORLEVEL%
+   exit 1
+)
 
-cmake --build ./build --config %CMAKE_CONFIG% --target install
-IF %ERRORLEVEL% NEQ 0 exit 1
+cmake --build .\build --config %CMAKE_CONFIG% --target install
+IF %ERRORLEVEL% NEQ 0  (
+   ECHO error building via cmake %ERRORLEVEL%
+   exit 1
+)
 
