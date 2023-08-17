@@ -1,5 +1,7 @@
 
-rem Build new cmake
+:: build new cmake executable
+
+set PATH=%PREFIX%\cmake-bin\bin;%PATH%
 mkdir build
 
 set CMAKE_CONFIG="Release"
@@ -17,8 +19,8 @@ cmake -LAH -G"Ninja"                                         ^
     -DCURL_WINDOWS_SSPI:BOOL=ON                              ^
     -DBUILD_CursesDialog:BOOL=ON                             ^
     -S . -B build
-if errorlevel 1 exit 1
+IF %ERRORLEVEL% NEQ 0 exit 1
 
 cmake --build ./build --config %CMAKE_CONFIG% --target install
-if errorlevel 1 exit 1
+IF %ERRORLEVEL% NEQ 0 exit 1
 

@@ -23,55 +23,61 @@ build:
   ignore_run_exports:
     - vc
 
-requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - make             # [unix]
-    - ninja            # [win]
-    - patch            # [not win]
-    - m2-patch         # [win]
-    - m2-ncurses       # [win]
-    - jsoncpp >=1.6.0  # [win or unix]
-    - cmake-no-system  # [win or unix]
+outputs:
+  - name: cmake
+    script: build.sh  # [unix]
+    script: bld_shared.bat  # [win]
 
-  host:
-    - jsoncpp >=1.6.0  # [win or unix]
-    - bzip2            # [unix]
-    - libcurl          # [unix]
-    - expat            # [unix]
-    - ncurses          # [unix]
-    - m2-ncurses       # [win]
-    - xz               # [unix]
-    - zlib             # [unix]
-    - libuv            # [unix]
-    - rhash            # [unix]
-    - zstd             # [unix]
+    requirements:
+      build:
+        - cmake = 3.26.4   # [win]
+        - cmake-no-system  # [not win]
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - ninja            # [win]
+        - make             # [unix]
+        - patch            # [not win]
+        - m2-patch         # [win]
+        - m2-ncurses       # [win]
+        - jsoncpp >=1.6.0  # [win or unix]
 
-  run:
-    - bzip2            # [unix]
-    - libcurl          # [unix]
-    - expat            # [unix]
-    - ncurses          # [unix]
-    - xz               # [unix]
-    - zlib             # [unix]
-    - libuv            # [unix]
-    - rhash            # [unix]
-    - zstd             # [unix]
-    - vs2015_runtime   # [win]
+      host:
+        - jsoncpp >=1.6.0  # [win or unix]
+        - bzip2            # [unix]
+        - libcurl          # [unix]
+        - expat            # [unix]
+        - ncurses          # [unix]
+        - m2-ncurses       # [win]
+        - xz               # [unix]
+        - zlib             # [unix]
+        - libuv            # [unix]
+        - rhash            # [unix]
+        - zstd             # [unix]
 
-test:
-  files:
-    - SSLTest.cmake
-  commands:
-    - cmake --version
-    - cmake -V -P SSLTest.cmake
-    - ctest --version
-    - cpack --version
-    - ccmake --version
+      run:
+        - bzip2            # [unix]
+        - libcurl          # [unix]
+        - expat            # [unix]
+        - ncurses          # [unix]
+        - xz               # [unix]
+        - zlib             # [unix]
+        - libuv            # [unix]
+        - rhash            # [unix]
+        - zstd             # [unix]
+        - vs2015_runtime   # [win]
+
+    test:
+      files:
+        - SSLTest.cmake
+      commands:
+        - cmake --version
+        - cmake -V -P SSLTest.cmake
+        - ctest --version
+        - cpack --version
+        - ccmake --version
 
 about:
-  home: http://www.cmake.org/
+  home: https://www.cmake.org/
   license: BSD-3-Clause
   license_family: BSD
   license_file:
