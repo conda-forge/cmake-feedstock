@@ -26,7 +26,7 @@ build:
 outputs:
   - name: cmake
     script: build.sh  # [unix]
-    script: bld_shared.bat  # [win]
+    script: bld.bat  # [win]
 
     requirements:
       build:
