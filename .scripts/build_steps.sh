@@ -33,7 +33,7 @@ CONDARC
 
 
 mamba install --update-specs --yes --quiet --channel conda-forge \
-    conda-build pip conda-forge-ci-setup=3
+    "conda-build<3.26" pip conda-forge-ci-setup=3
 
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"

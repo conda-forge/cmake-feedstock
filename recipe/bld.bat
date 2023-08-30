@@ -7,23 +7,24 @@ cmake --version
 
 mkdir build && cd build
 
-set CMAKE_CONFIG="Release"
-
-dir /p %LIBRARY_PREFIX%\lib
-
-
-cmake -LAH -G"NMake Makefiles"                               ^
-    -DCMAKE_BUILD_TYPE=%CMAKE_CONFIG%                        ^
-    -DCMAKE_FIND_ROOT_PATH="%LIBRARY_PREFIX%"                ^
-    -DCMAKE_PREFIX_PATH="%PREFIX%"                           ^
+cmake -LAH -G Ninja                                          ^
+    -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%"                   ^
     -DCMAKE_CXX_STANDARD:STRING=17                           ^
+    -DCMAKE_USE_SYSTEM_LIBRARIES=ON                          ^
+    -DCMAKE_USE_SYSTEM_JSONCPP=OFF                           ^
+    -DCMAKE_USE_SYSTEM_LIBARCHIVE=OFF                        ^
+    -DCMAKE_USE_SYSTEM_CPPDAP=OFF                            ^
+    -DCMAKE_USE_SYSTEM_LIBRHASH=OFF                          ^
+    -DCMAKE_USE_SYSTEM_LIBRARY_JSONCPP=OFF                   ^
+    -DCMAKE_USE_SYSTEM_LIBRARY_LIBARCHIVE=OFF                ^
+    -DCMAKE_USE_SYSTEM_LIBRARY_CPPDAP=OFF                    ^
+    -DCMAKE_USE_SYSTEM_LIBRARY_LIBRHASH=OFF                  ^
     -DCMake_HAVE_CXX_MAKE_UNIQUE:INTERNAL=TRUE               ^
-    -DCMAKE_USE_SCHANNEL:BOOL=ON                             ^
+    -DCURL_USE_SCHANNEL:BOOL=ON                              ^
     -DCURL_WINDOWS_SSPI:BOOL=ON                              ^
     -DBUILD_CursesDialog:BOOL=ON                             ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ..
 if errorlevel 1 exit 1
 
-cmake --build . --config %CMAKE_CONFIG% --target install
+cmake --build . --target install --parallel %CPU_COUNT%
 if errorlevel 1 exit 1
-
