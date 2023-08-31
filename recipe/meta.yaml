@@ -9,7 +9,7 @@ source:
   sha256: 0a905ca8635ca81aa152e123bdde7e54cbe764fdd9a70d62af44cad8b92967af
 
 build:
-  number: 3
+  number: 4
   ignore_run_exports:
     - vc
 
@@ -19,6 +19,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake-no-system  # [unix]
     - ninja
+    - 7za  # [win]
 
   host:
     - bzip2
@@ -27,16 +28,13 @@ requirements:
     - ncurses  # [unix]
     - xz
     - zlib
-    - libuv  # [unix]
+    - libuv
     - rhash  # [unix]
     - zstd
 
 test:
-  files:
-    - SSLTest.cmake
   commands:
     - cmake --version
-    - cmake -V -P SSLTest.cmake
     - ctest --version
     - cpack --version
     - ccmake --version
