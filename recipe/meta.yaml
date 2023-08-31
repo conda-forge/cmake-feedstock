@@ -28,7 +28,7 @@ requirements:
     - xz
     - zlib
     - libuv  # [unix]
-    - rhash  # [unix]
+    - rhash >=1.4.4  # [unix]
     - zstd
 
 test:
