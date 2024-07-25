@@ -9,7 +9,7 @@ source:
   sha256: df9b3c53e3ce84c3c1b7c253e5ceff7d8d1f084ff0673d048f260e04ccb346e1
 
 build:
-  number: 0
+  number: 1
   ignore_run_exports:
     - vc
 
