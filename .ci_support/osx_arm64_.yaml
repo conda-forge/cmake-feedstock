@@ -24,14 +24,14 @@ expat:
 - '2'
 libcurl:
 - '8'
+liblzma_devel:
+- '5'
 macos_machine:
 - arm64-apple-darwin20.0.0
 ncurses:
 - '6'
 target_platform:
 - osx-arm64
-xz:
-- '5'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version

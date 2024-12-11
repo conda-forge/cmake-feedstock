@@ -9,7 +9,7 @@ source:
   sha256: 42abb3f48f37dbd739cdfeb19d3712db0c5935ed5c2aef6c340f9ae9114238a2
 
 build:
-  number: 0
+  number: 1
   ignore_run_exports:
     - vc
 
@@ -27,7 +27,7 @@ requirements:
     - libcurl
     - expat
     - ncurses  # [unix]
-    - xz
+    - liblzma-devel
     - zlib
     - libuv
     - rhash  # [unix]

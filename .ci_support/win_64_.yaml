@@ -14,12 +14,12 @@ expat:
 - '2'
 libcurl:
 - '8'
+liblzma_devel:
+- '5'
 target_platform:
 - win-64
 vc:
 - '14'
-xz:
-- '5'
 zlib:
 - '1'
 zstd:
