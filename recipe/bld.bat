@@ -9,6 +9,8 @@ cmake -LAH -G Ninja                                          ^
     -DCMAKE_BUILD_TYPE:STRING=Release                        ^
     -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%"                   ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"                ^
+    -DCMAKE_UNITY_BUILD=ON                                   ^
+    -DCMAKE_UNITY_BUILD_BATCH_SIZE=32                        ^
     -DCMAKE_USE_SYSTEM_LIBRARIES=ON                          ^
     -DCMAKE_USE_SYSTEM_JSONCPP=OFF                           ^
     -DCMAKE_USE_SYSTEM_LIBARCHIVE=OFF                        ^
