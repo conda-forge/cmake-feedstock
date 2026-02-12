@@ -1,0 +1,24 @@
+bzip2:
+- '1'
+c_compiler:
+- vs2022
+c_stdlib:
+- vs
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- vs2022
+expat:
+- '2'
+libcurl:
+- '8'
+liblzma_devel:
+- '5'
+target_platform:
+- win-arm64
+zlib:
+- '1'
+zstd:
+- '1.5'
