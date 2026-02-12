@@ -28,14 +28,14 @@ requirements:
     - bzip2
     - libcurl
     - expat
-    - if: unix
-      then: ncurses
     - liblzma-devel
     - zlib
     - libuv
-    - if: unix
-      then: rhash
     - zstd
+    - if: unix
+      then: 
+        - ncurses
+        - rhash
   ignore_run_exports:
     by_name:
       - vc
@@ -52,11 +52,10 @@ about:
   license_file:
     - LICENSE.rst
     - if: win
-      then: Utilities/cmlibrhash/COPYING
-    - if: win
-      then: Utilities/cmpdcurses/README.md
-    - if: win
-      then: Utilities/cmpdcurses/wincon/README.md
+      then: 
+        - Utilities/cmlibrhash/COPYING
+        - Utilities/cmpdcurses/README.md
+        - Utilities/cmpdcurses/wincon/README.md
     - Utilities/cmcppdap/LICENSE
     - Utilities/cmlibarchive/COPYING
     - Utilities/cmjsoncpp/LICENSE
