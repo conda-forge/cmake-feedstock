@@ -9,9 +9,11 @@ source:
   sha256: 7efaccde8c5a6b2968bad6ce0fe60e19b6e10701a12fce948c2bf79bac8a11e9
 
 build:
-  number: 0
+  number: 1
   ignore_run_exports:
     - vc
+  script_env:
+    - MAJOR_MINOR={{ ".".join(version.split(".")[:2]) }}
 
 requirements:
   build:
@@ -39,6 +41,8 @@ test:
     - ctest --version
     - cpack --version
     - ccmake --version
+    - test ! -d $PREFIX/doc                   # [unix]
+    - if exist %LIBRARY_PREFIX%\\doc exit 1   # [win]
 
 about:
   home: http://www.cmake.org/
