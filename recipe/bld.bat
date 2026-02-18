@@ -9,6 +9,7 @@ cmake -LAH -G Ninja                                          ^
     -DCMAKE_BUILD_TYPE:STRING=Release                        ^
     -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%"                   ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%"                ^
+    -DCMAKE_DOC_DIR="%LIBRARY_PREFIX%\\share\\doc\\cmake-%MAJOR_MINOR%" ^
     -DCMAKE_USE_SYSTEM_LIBRARIES=ON                          ^
     -DCMAKE_USE_SYSTEM_JSONCPP=OFF                           ^
     -DCMAKE_USE_SYSTEM_LIBARCHIVE=OFF                        ^
