@@ -1,8 +1,6 @@
-
+set "CPU_ARCH=%ARCH%"
 if "%ARCH%"=="32" set CPU_ARCH=i386
 if "%ARCH%"=="64" set CPU_ARCH=x86_64
-REM Cross-compiling arm64, use x64 to bootstrap
-if "%ARCH%"=="arm64" set CPU_ARCH=x86_64
 
 curl https://cmake.org/files/v%PKG_VERSION:~0,4%/cmake-%PKG_VERSION%-windows-%CPU_ARCH%.zip -o cmake-win.zip
 7za x cmake-win.zip > nil
