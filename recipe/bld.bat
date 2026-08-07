@@ -33,10 +33,9 @@ if errorlevel 1 exit 1
 cmake --build . --target install -j%CPU_COUNT%
 if errorlevel 1 exit 1
 
-if "%CONDA_BUILD_CROSS_COMPILATION%"=="1" (
-    echo Cross compiling. Skipping tests.
-    exit 0
+if "%build_platform%" == "%target_platform%" (
+    ctest --test-dir . --output-on-failure -j%CPU_COUNT% -R "CTestTestParallel|DOWNLOAD"
+    if errorlevel 1 exit 1
 )
 
-ctest --test-dir . --output-on-failure -j%CPU_COUNT% -R "CTestTestParallel|DOWNLOAD"
-if errorlevel 1 exit 1
+exit 0
