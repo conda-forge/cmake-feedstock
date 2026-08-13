@@ -22,7 +22,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake-no-system  # [unix]
     - ninja
-    - 7za  # [win]
+    - 7zip  # [win]
 
   host:
     - bzip2

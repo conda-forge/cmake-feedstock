@@ -1,5 +1,7 @@
+set "CPU_ARCH=%ARCH%"
+if "%ARCH%"=="32" set CPU_ARCH=i386
+if "%ARCH%"=="64" set CPU_ARCH=x86_64
 
-if "%ARCH%"=="32" (set CPU_ARCH=i386) else (set CPU_ARCH=x86_64)
 curl https://cmake.org/files/v%PKG_VERSION:~0,4%/cmake-%PKG_VERSION%-windows-%CPU_ARCH%.zip -o cmake-win.zip
 7za x cmake-win.zip > nil
 set PATH=%CD%\cmake-%PKG_VERSION%-windows-%CPU_ARCH%\bin;%PATH%
@@ -29,5 +31,9 @@ if errorlevel 1 exit 1
 cmake --build . --target install -j%CPU_COUNT%
 if errorlevel 1 exit 1
 
-ctest --test-dir . --output-on-failure -j%CPU_COUNT% -R "CTestTestParallel|DOWNLOAD"
-if errorlevel 1 exit 1
+if not %CONDA_BUILD_SKIP_TESTS%==1 (
+    ctest --test-dir . --output-on-failure -j%CPU_COUNT% -R "CTestTestParallel|DOWNLOAD"
+    if errorlevel 1 exit 1
+)
+
+exit 0

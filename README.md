@@ -3,6 +3,23 @@ About cmake-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmake-feedstock/blob/main/LICENSE.txt)
 
+
+About cmake
+-----------
+
+Home: http://www.cmake.org/
+
+Package license: BSD-3-Clause
+
+Summary: CMake is an extensible, open-source system that manages the build process
+
+Development: https://gitlab.kitware.com/cmake/cmake
+
+Documentation: https://cmake.org/documentation
+
+About cmake
+-----------
+
 Home: http://www.cmake.org/
 
 Package license: BSD-3-Clause
@@ -44,13 +61,6 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cmake-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=162&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cmake-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -76,31 +86,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `cmake` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install cmake
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install cmake
 ```
 
-It is possible to list all of the versions of `cmake` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add cmake
+# for installing globally
+pixi global install cmake
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `cmake` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search cmake --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search cmake --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search cmake --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -112,6 +164,8 @@ mamba repoquery whoneeds cmake --channel conda-forge
 # List dependencies of `cmake`:
 mamba repoquery depends cmake --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
