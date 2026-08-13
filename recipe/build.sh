@@ -21,5 +21,5 @@ cmake -LAH -G Ninja ${CMAKE_ARGS} \
 
 cmake --build . --target install -j${CPU_COUNT}
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
-  ctest --output-on-failure -j${CPU_COUNT} -R "CTestTestParallel|DOWNLOAD"
+  ctest --output-on-failure -j${CPU_COUNT} -R "CTestTestParallel"
 fi
