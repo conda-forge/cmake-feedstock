@@ -31,6 +31,9 @@ if errorlevel 1 exit 1
 cmake --build . --target install -j%CPU_COUNT%
 if errorlevel 1 exit 1
 
+rmdir /S /Q "%CD%\cmake-%PKG_VERSION%-windows-%CPU_ARCH%"
+if errorlevel 1 exit 1
+
 if not "%CONDA_BUILD_SKIP_TESTS%"=="1" (
     ctest --test-dir . --output-on-failure -j%CPU_COUNT% -R "CTestTestParallel|DOWNLOAD"
     if errorlevel 1 exit 1
