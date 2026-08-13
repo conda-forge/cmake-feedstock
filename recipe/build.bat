@@ -35,7 +35,7 @@ rmdir /S /Q "%CD%\cmake-%PKG_VERSION%-windows-%CPU_ARCH%"
 if errorlevel 1 exit 1
 
 if not "%CONDA_BUILD_SKIP_TESTS%"=="1" (
-    ctest --test-dir . --output-on-failure -j%CPU_COUNT% -R "CTestTestParallel|DOWNLOAD"
+    ctest --test-dir . --output-on-failure -j%CPU_COUNT% -R "CTestTestParallel"
     if errorlevel 1 exit 1
 )
 
