@@ -7,7 +7,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cmake-feedstock
 About cmake
 -----------
 
-Home: http://www.cmake.org/
+Home: https://cmake.org/
 
 Package license: BSD-3-Clause
 
@@ -20,7 +20,7 @@ Documentation: https://cmake.org/documentation
 About cmake
 -----------
 
-Home: http://www.cmake.org/
+Home: https://cmake.org/
 
 Package license: BSD-3-Clause
 
