@@ -13,7 +13,7 @@ source:
   sha256: c46400618b4f1f2b43507f24fb22f3ae830c3416cf23b776e16e1d413aa892f0
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       MAJOR_MINOR: ${{ maj_min }}
@@ -55,6 +55,15 @@ tests:
           - test ! -d $PREFIX/doc
         else:
           - if exist %LIBRARY_PREFIX%\\doc exit 1
+      - if: linux
+        then:
+          - test -f $PREFIX/etc/conda/activate.d/cmake_activate.sh
+          - export CROSSCOMPILING_EMULATOR=/usr/bin/qemu-test
+          - export CONDA_BUILD_CROSS_COMPILATION=1
+          - source $PREFIX/etc/conda/activate.d/cmake_activate.sh
+          - test "$CMAKE_CROSSCOMPILING_EMULATOR" = "$CROSSCOMPILING_EMULATOR"
+          - source $PREFIX/etc/conda/deactivate.d/cmake_deactivate.sh
+          - test -z "${CMAKE_CROSSCOMPILING_EMULATOR+x}"
 
 about:
   homepage: https://cmake.org/

@@ -20,6 +20,13 @@ cmake -LAH -G Ninja ${CMAKE_ARGS} \
     . || (cat TryRunResults.cmake; false)
 
 cmake --build . --target install -j${CPU_COUNT}
+
+if [[ "${target_platform}" == linux-* ]]; then
+  mkdir -p "${PREFIX}/etc/conda/activate.d" "${PREFIX}/etc/conda/deactivate.d"
+  cp "${RECIPE_DIR}/activate.sh" "${PREFIX}/etc/conda/activate.d/cmake_activate.sh"
+  cp "${RECIPE_DIR}/deactivate.sh" "${PREFIX}/etc/conda/deactivate.d/cmake_deactivate.sh"
+fi
+
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
   ctest --output-on-failure -j${CPU_COUNT} -R "CTestTestParallel"
 fi
