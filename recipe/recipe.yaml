@@ -13,7 +13,7 @@ source:
   sha256: a79bf33cbe05686fdf79c2bbbcfe5e8e62ad16d3d540fa737cbedfeed41fb69e
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       MAJOR_MINOR: ${{ maj_min }}
